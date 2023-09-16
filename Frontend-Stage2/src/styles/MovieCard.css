@@ -1,35 +1,50 @@
-/* Style the movie card container */
+/* MovieCard.css */
+
+/* Style the container for the list of movie cards */
+
 .movie-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+/* Style individual movie cards */
 .movie-card {
-  border: 1px solid #ffffff;
   margin: 10px;
   padding: 10px;
+  border-radius: 5px;
+  width: 250px;
   text-align: center;
-  background-color: #f5f5f5;
-  width: calc(20% - 20px); /* 25% width for 4 cards per row, subtracting margins */
-  max-width: 250px; /* Max width to maintain responsiveness */
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Style the movie poster image */
+/* Remove the outline on focus (for accessibility) */
+.movie-card:focus {
+  outline: none;
+}
+
+/* Style movie poster images */
 .movie-card img {
-  max-width: 100%; /* Ensure the image scales within the card */
-  height: auto; /* Automatically adjust the height */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Style the movie title */
+/* Style movie titles */
 .movie-title {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.2rem;
   margin-top: 10px;
 }
 
-/* Style the release date */
+/* Style movie release date */
 .movie-release-date {
-  font-size: 14px;
+  font-size: 1rem;
   color: #777;
+  margin-top: 5px;
+}
+
+/* Increase size on hover */
+.movie-card:hover {
+  transform: scale(1.05);
 }
